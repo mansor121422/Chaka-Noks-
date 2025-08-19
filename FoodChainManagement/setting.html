@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="setting.css">
+</head>
+<body class="light-mode">
+  <!-- Sidebar -->
+  <div class="sidebar">
+  <h2>Dashboard</h2>
+  <a href="dashboard.html" class="nav-btn">Dashboard</a>
+  <a href="inventory.html" class="nav-btn">Inventory</a>
+  <a href="branchPortal.html" class="nav-btn">Branch Portal</a>
+  <a href="suppliers.html" class="nav-btn">Suppliers</a>
+  <a href="logistic.html" class="nav-btn">Logistic/Delivery</a>
+  <a href="franchise.html" class="nav-btn">Franchise</a>
+  <a href="reports.html" class="nav-btn">Reports</a>
+  <a href="userRole.html" class="nav-btn">User/Role</a>
+  <a href="setting.html" class="nav-btn active">Settings</a>
+</div>
+
+  <!-- Main content -->
+ <div class="main">
+    <!-- Search bar removed, design preserved -->
+
+    <!-- General Section -->
+    <section>
+      <h3>General</h3>
+      <form>
+        <label>Company Name</label>
+        <input type="text" placeholder="Enter company name">
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter email">
+
+        <label>Contact Number</label>
+        <input type="text" placeholder="Enter phone number">
+
+        <label>Address</label>
+        <input type="text" placeholder="Enter address">
+
+        <button type="submit" class="btn primary">Save</button>
+      </form>
+    </section>
+
+    <!-- Branch Management Section -->
+    <section>
+      <h3>Branch Management</h3>
+      <form>
+        <div class="row">
+          <label>Branch Name</label>
+          <input type="text" placeholder="Enter branch name">
+
+          <label>Manager</label>
+          <input type="text" placeholder="Enter manager name">
+        </div>
+
+        <div class="row">
+          <label>Location</label>
+          <input type="text" placeholder="Enter branch location">
+
+          <label>Status</label>
+          <input type="text" placeholder="Active / Inactive">
+        </div>
+      </form>
+    </section>
+
+    <!-- Preferences Section -->
+    <section>
+      <h3>Preferences</h3>
+      <form id="themeForm">
+        <label>Theme</label>
+        <select id="themeSelect">
+          <option value="light">Light Mode</option>
+          <option value="dark">Dark Mode</option>
+        </select>
+        <button type="button" class="btn primary" onclick="changeTheme()">Save</button>
+      </form>
+    </section>
+
+    <!-- Example content to show theme -->
+    <section>
+      <h3>Preview Content</h3>
+      <p>Some text that changes color when switching between light and dark mode.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Another line of some text for previewing theme mode.</p>
+    </section>
+  </div>
+
+  <script>
+    function changeTheme() {
+      const theme = document.getElementById("themeSelect").value;
+      const body = document.body;
+
+      if (theme === "dark") {
+        body.classList.remove("light-mode");
+        body.classList.add("dark-mode");
+      } else {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+      }
+    }
+  </script>
+</body>
+</html>

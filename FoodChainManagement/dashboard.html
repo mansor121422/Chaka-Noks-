@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+  <h2>Dashboard</h2>
+  <a href="dashboard.html" class="nav-btn active">Dashboard</a>
+  <a href="inventory.html" class="nav-btn">Inventory</a>
+  <a href="branchPortal.html" class="nav-btn">Branch Portal</a>
+  <a href="suppliers.html" class="nav-btn">Suppliers</a>
+  <a href="logistic.html" class="nav-btn">Logistic/Delivery</a>
+  <a href="franchise.html" class="nav-btn">Franchise</a>
+  <a href="reports.html" class="nav-btn">Reports</a>
+  <a href="userRole.html" class="nav-btn">User/Role</a>
+  <a href="setting.html" class="nav-btn">Settings</a>
+</div>
+
+  <!-- Main content -->
+  <div class="main">
+    <!-- Search -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+    <div class="card">
+        Branches
+        <div class="card-number">12</div>
+    </div>
+    <div class="card">
+        Suppliers
+        <div class="card-number">8</div>
+    </div>
+    <div class="card">
+        Orders
+        <div class="card-number">27</div>
+    </div>
+    </div>
+
+    <!-- Table -->
+     <table>
+      <thead>
+        <tr>
+          <th>Branch</th>
+          <th>Request Type</th>
+          <th>Amount</th>
+          <th>Priority</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Downtown Branch</td>
+          <td>Emergency Stock</td>
+          <td>$2,500</td>
+          <td><span class="badge high">HIGH</span></td>
+          <td>
+            <button class="btn success">Approve</button>
+            <button class="btn secondary">Review</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Mall Branch</td>
+          <td>Regular Restock</td>
+          <td>$1,800</td>
+          <td><span class="badge medium">MEDIUM</span></td>
+          <td>
+            <button class="btn secondary">View Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
